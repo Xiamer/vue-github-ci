@@ -2,11 +2,11 @@
  * @Author: xiaoguang_10@qq.com
  * @LastEditors: xiaoguang_10@qq.com
  * @Date: 2020-12-29 15:52:42
- * @LastEditTime: 2020-12-29 16:10:13
+ * @LastEditTime: 2020-12-29 16:15:18
 -->
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App3"/>
+  <HelloWorld msg="Welcome to Your Vue.js App4"/>
 </template>
 
 <script>
