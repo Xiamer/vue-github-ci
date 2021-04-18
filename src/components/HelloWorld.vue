@@ -1,3 +1,9 @@
+<!--
+ * @Author: xiaoguang_10@qq.com
+ * @LastEditors: xiaoguang_10@qq.com
+ * @Date: 2020-12-29 15:52:42
+ * @LastEditTime: 2021-04-18 23:06:33
+-->
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -31,10 +37,24 @@
 </template>
 
 <script>
+import { EventEmitter} from 'x-fe-util';
+import * as Track from "x-track";
+import {Exposure, Click, TP } from "x-track";
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  mounted() {
+    console.log('EventEmitter', EventEmitter)
+    console.log('Track', Track)
+    console.log('Exposure', Exposure)
+    console.log('TP', TP, 'Click', Click)
+    new TP({
+      trackCb(oData) {
+        localStorage.setItem('oData', JSON.stringify(oData))
+      }
+    })
   }
 }
 </script>
